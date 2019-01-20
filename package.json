@@ -1,0 +1,83 @@
+{
+  "name": "mlts-experiment-data",
+  "version": "0.0.0",
+  "description": "Machine learning experiment data downloader.",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "lint": "tslint --config tslint.json --project . --format stylish",
+    "test": "npm run tsc && jest",
+    "tsc": "tsc",
+    "prepush": "npm run -s lint && npm run -s build",
+    "release": "rm -rf dist && npm run tsc && npx semantic-release"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "**/tests/**/*.test.ts?(x)"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "./src"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "collectCoverage": true,
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^7.0.0",
+    "@types/jest": "~23.3.1",
+    "commitlint": "^7.0.0",
+    "husky": "^0.14.3",
+    "jest": "^23.3.0",
+    "ts-jest": "^23.0.0",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.9.1",
+    "typescript": "~3.2.2",
+    "utilities-ts": "git+https://github.com/andnp/utilities-ts.git"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release": {
+    "branch": "master"
+  },
+  "dependencies": {
+    "@types/mkdirp": "^0.5.2",
+    "@types/node": "^10.0.3",
+    "axios": "^0.18.0",
+    "idx-data": "^1.0.0",
+    "inly": "^2.0.2",
+    "mkdirp": "^0.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andnp/mlts-experiment-data.git"
+  },
+  "keywords": [
+    "typescript",
+    "machine learning",
+    "cifar10",
+    "mnist",
+    "data"
+  ],
+  "author": "Andy Patterson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andnp/mlts-experiment-data/issues"
+  },
+  "homepage": "https://github.com/andnp/mlts-experiment-data#readme",
+  "files": [
+    "dist/src/",
+    "src/"
+  ]
+}
