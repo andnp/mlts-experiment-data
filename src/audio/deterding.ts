@@ -1,7 +1,7 @@
 import * as path from 'path';
 
 import * as downloader from '../utils/downloader';
-import { Data } from '../Data';
+import { Dataset } from '../Data';
 import * as idx from 'idx-data';
 
 const dataRemoteLocation = 'https://rawgit.com/andnp/ml_data/master/deterding.tar.gz';
@@ -27,7 +27,7 @@ export async function load(location = '.tmp') {
         idx.loadBits(path.join(root, 'deterding_test-labels.idx')),
     ]);
 
-    return new Data(
+    return new Dataset(
         dataX,
         dataY,
         dataT,

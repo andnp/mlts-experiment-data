@@ -77,7 +77,6 @@
   },
   "homepage": "https://github.com/andnp/mlts-experiment-data#readme",
   "files": [
-    "dist/src/",
-    "src/"
+    "dist/src/"
   ]
 }

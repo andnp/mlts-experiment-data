@@ -1,7 +1,7 @@
 import * as path from 'path';
 
 import * as downloader from '../utils/downloader';
-import { Data } from '../Data';
+import { Dataset } from '../Data';
 import * as idx from 'idx-data';
 import { splitTensor } from '../utils/utils';
 
@@ -27,7 +27,7 @@ export async function load(location = '.tmp') {
     const [x, t] = splitTensor(dataX, 50000);
     const [y, ty] = splitTensor(dataY, 50000);
 
-    return new Data(
+    return new Dataset(
         x,
         y,
         t,

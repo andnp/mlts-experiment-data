@@ -3,12 +3,7 @@ import { IdxTensor } from 'idx-data';
 
 export interface DataTensor extends IdxTensor {}
 
-export interface Dataset<M> {
-    train: [ M, M ];
-    test: [ M, M ];
-}
-
-export class Data implements Dataset<DataTensor> {
+export class Dataset {
     constructor(
         protected _x: DataTensor,
         protected _y: DataTensor,

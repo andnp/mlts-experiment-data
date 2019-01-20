@@ -2,6 +2,7 @@
 // Utils
 // -----
 export * from './utils/downloader';
+export { Dataset } from './Data';
 
 // ------
 // Images
