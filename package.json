@@ -53,7 +53,7 @@
   },
   "dependencies": {
     "@types/mkdirp": "^0.5.2",
-    "@types/node": "^10.0.3",
+    "@types/node": "^11.9.0",
     "axios": "^0.18.0",
     "idx-data": "^1.0.0",
     "inly": "^3.0.3",
