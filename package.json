@@ -54,7 +54,7 @@
   "dependencies": {
     "@types/mkdirp": "^0.5.2",
     "@types/node": "^13.1.0",
-    "axios": "^0.19.0",
+    "axios": "^1.12.1",
     "idx-data": "^1.0.0",
     "inly": "^4.0.0",
     "mkdirp": "^0.5.1"
